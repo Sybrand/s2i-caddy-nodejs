@@ -1,12 +1,13 @@
 # caddy-s2i-builder
-FROM registry.redhat.io/rhel8/nodejs-12:latest
+# FROM registry.redhat.io/rhel8/nodejs-12:latest
+FROM registry.access.redhat.com/ubi8/nodejs-14
 
 USER 0
 
 LABEL maintainer="Jason Leach <jason.leach@fullboar.ca>"
 
 ENV BUILDER_VERSION 1.1
-ENV CADDY_VERSION 2.1.1
+ENV CADDY_VERSION 2.3.0
 
 LABEL io.k8s.description="Platform for building Caddy images" \
      io.k8s.display-name="builder ${BUILDER_VERSION}" \
